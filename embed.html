@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Chirag AI Widget Embed Code</title>
+  <style>
+    body { font-family: monospace; background: #0D0B08; color: #F5EDD8; padding: 40px; }
+    pre { background: #1E1A14; border: 1px solid rgba(201,151,58,0.3); border-radius: 12px; padding: 24px; overflow-x: auto; font-size: 14px; line-height: 1.7; }
+    h2 { color: #C9973A; margin-bottom: 16px; font-family: Georgia, serif; }
+    p { color: #8C7A60; margin-bottom: 20px; font-size: 14px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <h2>🔌 Embed Chirag AI on Your Website</h2>
+  <p>Paste this code just before the &lt;/body&gt; tag on coachchiragchhabra.com</p>
+  <pre id="code"></pre>
+  <script>
+    const YOUR_DEPLOYED_URL = 'https://YOUR-VERCEL-APP.vercel.app'; // Replace with your Vercel URL
+    const snippet = `<!-- Chirag AI Widget -->
+&lt;style&gt;
+  #chirag-chat-btn {
+    position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: linear-gradient(135deg, #C9973A, #A07828);
+    border: none; cursor: pointer; box-shadow: 0 4px 20px rgba(201,151,58,0.5);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; transition: transform 0.2s;
+  }
+  #chirag-chat-btn:hover { transform: scale(1.1); }
+  #chirag-chat-frame {
+    position: fixed; bottom: 100px; right: 24px; z-index: 9998;
+    width: 380px; height: 600px; border-radius: 20px;
+    border: 1px solid rgba(201,151,58,0.3);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    display: none; overflow: hidden;
+  }
+  @media (max-width: 480px) {
+    #chirag-chat-frame { width: calc(100vw - 24px); height: 80dvh; right: 12px; bottom: 90px; }
+  }
+&lt;/style&gt;
+
+&lt;button id="chirag-chat-btn" onclick="toggleChiragChat()" title="Chat with Chirag AI"&gt;🤖&lt;/button&gt;
+&lt;iframe id="chirag-chat-frame" src="${YOUR_DEPLOYED_URL}" frameborder="0" allow="microphone"&gt;&lt;/iframe&gt;
+
+&lt;script&gt;
+  function toggleChiragChat() {
+    const frame = document.getElementById('chirag-chat-frame');
+    frame.style.display = frame.style.display === 'block' ? 'none' : 'block';
+  }
+&lt;/script&gt;`;
+    document.getElementById('code').textContent = snippet;
+  </script>
+</body>
+</html>
